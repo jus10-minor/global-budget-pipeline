@@ -1,0 +1,24 @@
+# dbt
+target/
+dbt_packages/
+logs/
+
+# Python
+venv/
+__pycache__/
+*.pyc
+.env
+
+# Credentials - NEVER push these
+profiles.yml
+.user.yml
+
+# Power BI temp files
+*.pbix.lock
+
+# CSV exports (too large for GitHub)
+data/exports/
+
+# OS
+.DS_Store
+Thumbs.db

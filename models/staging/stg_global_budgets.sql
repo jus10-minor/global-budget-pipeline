@@ -1,0 +1,23 @@
+SELECT
+    country,
+    year,
+    total_budget_billions_usd            AS total_budget,
+    defense_percentage                   AS pct_defense,
+    education_percentage                 AS pct_education,
+    health_percentage                    AS pct_health,
+    infrastructure_percentage            AS pct_infrastructure,
+    social_welfare_percentage            AS pct_social_welfare,
+    agriculture_percentage               AS pct_agriculture,
+    interest_payments_percentage         AS pct_interest,
+    state_transfers_percentage           AS pct_state_transfers,
+    administration_and_others_percentage AS pct_admin,
+    defense_amount_billions_usd          AS amt_defense,
+    education_amount_billions_usd        AS amt_education,
+    health_amount_billions_usd           AS amt_health,
+    infrastructure_amount_billions_usd   AS amt_infrastructure,
+    social_welfare_amount_billions_usd   AS amt_social_welfare,
+    agriculture_amount_billions_usd      AS amt_agriculture,
+    interest_payments_amount_billions_usd AS amt_interest,
+    state_transfers_amount_billions_usd  AS amt_state_transfers,
+    administration_and_others_amount_billions_usd AS amt_admin
+FROM {{ source('raw', 'raw_global_budgets') }}

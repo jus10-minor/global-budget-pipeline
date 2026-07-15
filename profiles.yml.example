@@ -1,0 +1,13 @@
+global_budget_analysis:
+  target: dev
+  outputs:
+    dev:
+      type: snowflake
+      account: YOUR_ACCOUNT_IDENTIFIER
+      user: YOUR_USERNAME
+      password: YOUR_PASSWORD
+      role: TRANSFORM
+      warehouse: COMPUTE_WH
+      database: GLOBAL_BUDGETS
+      schema: DEV
+      threads: 4

@@ -1,0 +1,52 @@
+version: 2
+
+models:
+  - name: mart_budget_by_country
+    description: "Latest year budget snapshot per country for map and comparison visuals"
+    columns:
+      - name: country
+        tests:
+          - not_null
+      - name: year
+        tests:
+          - not_null
+      - name: total_budget
+        tests:
+          - not_null
+
+  - name: mart_budget_trends
+    description: "Full time series of budget data per country for trend analysis"
+    columns:
+      - name: country
+        tests:
+          - not_null
+      - name: year
+        tests:
+          - not_null
+
+  - name: mart_spending_categories
+    description: "Unpivoted spending categories - one row per country, year, and category"
+    columns:
+      - name: category
+        tests:
+          - not_null
+          - accepted_values:
+              values:
+                [
+                  "Defense",
+                  "Education",
+                  "Health",
+                  "Infrastructure",
+                  "Social Welfare",
+                  "Agriculture",
+                  "Interest Payments",
+                  "State Transfers",
+                  "Administration",
+                ]
+
+  - name: mart_country_rankings
+    description: "Countries ranked by total budget per year"
+    columns:
+      - name: budget_rank
+        tests:
+          - not_null

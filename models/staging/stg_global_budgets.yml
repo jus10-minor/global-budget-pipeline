@@ -1,0 +1,18 @@
+version: 2
+
+models:
+  - name: stg_global_budgets
+    description: "Cleaned and renamed global government budget data"
+    columns:
+      - name: country
+        description: "Country name"
+        tests:
+          - not_null
+      - name: year
+        description: "Budget year"
+        tests:
+          - not_null
+      - name: total_budget
+        description: "Total budget in billions USD"
+        tests:
+          - not_null

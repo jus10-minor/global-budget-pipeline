@@ -1,0 +1,22 @@
+version: 2
+
+sources:
+  - name: raw
+    database: GLOBAL_BUDGETS
+    schema: RAW
+    tables:
+      - name: raw_global_budgets
+        description: "Raw government budget data for 45 countries from 1936-2026"
+        columns:
+          - name: country
+            description: "Country name"
+            tests:
+              - not_null
+          - name: year
+            description: "Budget year"
+            tests:
+              - not_null
+          - name: total_budget_billions_usd
+            description: "Total government budget in billions USD"
+            tests:
+              - not_null
