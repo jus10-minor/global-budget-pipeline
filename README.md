@@ -20,7 +20,7 @@ and year-over-year budget ranking.
 ## Features
 
 - 45 countries and 90 years of historical government budget data
-- Multi-layer dbt transformation (staging → marts)
+- Multi-layer dbt transformation (staging to marts)
 - 4 analytical mart models built for visualization
 - Interactive Power BI dashboard with dynamic slicers
 - Cross-country spending comparison and category breakdowns
